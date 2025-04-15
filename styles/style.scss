@@ -1,7 +1,7 @@
 // Fichier principal pour appeler et centraliser les autres
 
 // 1) créer des _index.scss dans chaque dossier
-// 2) utiliser les @forward dans les _index.scss pour connecter les autres fichiers
+// 2) utiliser les @forward dans les _index.scss pour connecter les autres fichiers dans le même dossier
 // 3) utiliser @use pour connecter tous les fichiers _index.html au fichier principal
 
 @use "abstract" as *;

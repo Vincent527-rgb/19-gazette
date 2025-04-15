@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercice- </title>
+    <title>Gazette</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.min.css">
 </head>
 <!-- Trois pages : home, about us et contact -->
 <body>
-    <header>
+    <header id="top-page">
         <div class="logo">
             <img src="./img/core-img/logo.png" alt="logo">
         </div>
-        <nav>
-            <a href="#">Today</a>
-            <a href="#">Politics</a>
-            <a href="#">Lifestyle</a>
-            <a href="#">Travel</a>
-            <a href="#">Health</a>
-            <a href="#">Entertainment</a>
-            <a href="#">About us</a><a href="#">Contact</a>
+        <nav class="no-desktop">
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Regarder pour un popover? non demandé -->
+            <h5><a href="#">Menu</a></h5>
+        </nav>
+        <nav class="no-mobile">
+            <ul>
+                <li><a href="#">Today</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Lifestyle</a></li>
+                <li><a href="#">Travel</a></li>
+                <li><a href="#">Health</a></li>
+                <li><a href="#">Entertainment</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"><img src="./img/social-network/icons8-magnifying-glass.svg" alt="magnifying-glass"></a></li>
+            </ul>
         </nav>
     </header>
+    <!-- *** Debut main-home *** -->
     <main class="main-home">
         <div class="banner">
             <figure>
@@ -29,7 +47,7 @@
                 <figcaption>
                     <a class="btn" href="#">Crypto</a>
                     <h2><a href="#">Crypto world goes mad</a></h2>
-                    <p>March 29, 2018</p>
+                    <a class="datum" href="#">March 29, 2018</a>
                 </figcaption>
             </figure>
             <figure>
@@ -37,7 +55,7 @@
                 <figcaption>
                     <a class="btn" href="#">Live</a>
                     <h2><a href="#">The latest news live</a></h2>
-                    <p>March 29, 2018</p>
+                    <a class="datum" href="#">March 29, 2018</a>
                 </figcaption>
             </figure>
             <figure>
@@ -45,7 +63,7 @@
                 <figcaption>
                     <a class="btn" href="#">Politics</a>
                     <h2><a href="#">Financial advices</a></h2>
-                    <p>March 29, 2018</p>
+                    <a class="datum" href="#">March 29, 2018</a>
                 </figcaption>
             </figure>
             <figure>
@@ -53,7 +71,7 @@
                 <figcaption>
                     <a class="btn" href="#">Live</a>
                     <h2><a href="#">The latest news live</a></h2>
-                    <p>March 29, 2018</p>
+                    <a class="datum" href="#">March 29, 2018</a>
                 </figcaption>
             </figure>
         </div>
@@ -63,14 +81,14 @@
                     <section>
                         <a class="btn" href="#">Politics</a>
                         <h2>What's behind the world obsession with gems?</h2>
-                        <p>March 29, 2016</p>
+                        <p class="datum">March 29, 2016</p>
                     </section>
                     <figure>
                         <img src="./img/blog-img/1.jpg" alt="blog1">
                         <figcaption>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices egestas nunc, quis venenatis orci tincidunt id. Fusce commodo blandit eleifend. Nullam viverra tincidunt dolor, at pulvinar dui. Nullam at risus ut ipsum viverra posuere. Aliquam quis convallis enim. Nunc pulvinar molestie sem id blandit. Nunc venenatis interdum mollis. Aliquam finibus nulla quam, a iaculis justo finibus non. Suspendisse in fermentum nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices egestas nunc, quis venenatis orci tincidunt id. Fusce commodo blandit eleifend.</p>
+                            <a class="btn-reading" href="#">Continue reading > </a>
                             <div class="social-network">
-                                <a class="btn-reading" href="#">Continue reading > </a>
                                 <a href="#"><img src="./img/social-network/icons8-pinterest.svg" alt="pinterest"></a>
                                 <a href="#"><img src="./img/social-network/icons8-linkedin.svg" alt="linkedin"></a>
                                 <a href="#"><img src="./img/social-network/icons8-twitter.svg" alt="Twitter"></a>
@@ -79,32 +97,34 @@
                         </figcaption>
                     </figure>
                 </article>
+                <!-- *** -->
                 <section>
                     <h3>Today's most popular</h3>
                     <figure>
-                        <img src="./img/bg-img/2.jpg" alt="2">
+                        <img src="./img/blog-img/2.jpg" alt="2">
                         <figcaption>
                             <a class="btn" href="#">News</a>
                             <h2><a href="#">$250-million mansion is most expensive</a></h2>
-                            <p>March 29, 2016</p>
+                            <p class="datum">March 29, 2016</p>
                             <a class="view-comments" href="#">3 comments</a>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices egestas nunc, quis venenatis orci tincidunt id. Fusce commodo blandit eleifend. Nullam viverra tincidunt dolor, at pulvinar dui. Nullam at risus ut ipsum viverra posuere.</p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="./img/bg-img/2.jpg" alt="2">
+                        <img src="./img/blog-img/3.jpg" alt="3">
                         <figcaption>
                             <a class="btn" href="#">Live</a>
                             <h2><a href="#">Homeless man steals $350,000</a></h2>
-                            <p>March 29, 2016</p>
+                            <p class="datum">March 29, 2016</p>
                             <a class="view-comments" href="#">3 comments</a>
                             <p>Aliquam quis convallis enim. Nunc pulvinar molestie sem id blandit. Nunc venenatis interdum mollis. Aliquam finibus nulla quam, a iaculis justo finibus non. Suspendisse in fermentum nunc.</p>
                         </figcaption>
                     </figure>
                 </section>
             </div>
+            
             <div class="breaking-news">
-                <h4>Breaking news</h4>
+                <h3>Breaking news</h3>
                 <figure>
                     <img src="./img/blog-img/bn-1.jpg" alt="bn-1">
                     <figcaption>
@@ -119,31 +139,33 @@
                         <h2><a href="#">Can a zebra crossing change its stripes?</a></h2>
                     </figcaption>
                 </figure>
-                <h4>Don't miss</h4>
-                <figure>
+                <!-- *** -->
+                <h3>Don't miss</h3>
+                <figure class="right-legend">
                     <img src="./img/blog-img/dm-1.jpg" alt="dm-1">
                     <figcaption>
                         <h2><a href="#">Crypto world goes mad</a></h2>
-                        <p>Nov 29, 2017</p>
+                        <p class="datum">Nov 29, 2017</p>
                     </figcaption>
                 </figure>
-                <figure>
+                <figure class="right-legend">
                     <img src="./img/blog-img/dm-2.jpg" alt="dm-2">
                     <figcaption>
                         <h2><a href="#">Crypto world goes mad</a></h2>
-                        <p>March 29, 2016</p>
+                        <p class="datum">March 29, 2016</p>
                     </figcaption>
                 </figure>
-                <figure>
+                <figure class="right-legend">
                     <img src="./img/blog-img/dm-3.jpg" alt="dm-3">
                     <figcaption>
                         <h2><a href="#">Crypto world goes mad</a></h2>
-                        <p>March 29, 2016</p>
+                        <p class="datum">March 29, 2016</p>
                     </figcaption>
                 </figure>
-                <h4>Subscribe</h4>
+                <!-- *** -->
+                <h3>Subscribe</h3>
                 <form action="#">
-                    <input type="email">
+                    <input type="email" placeholder="Your email">
                     <a class="btn btn-big" href="#">Subscribe</a>
                 </form>
             </div>
@@ -154,19 +176,19 @@
                 <figcaption>
                     <a class="btn" href="#">Video</a>
                     <h2><a href="#">Save the environment with this step</a></h2>
-                    <p>March 29, 2017</p>
+                    <p class="datum">March 29, 2017</p>
                 </figcaption>
                 <section>
                     <h2><a href="#">Protest to be announced in january</a></h2>
-                    <p>March 29, 2017</p>
+                    <p class="datum">March 29, 2017</p>
                 </section>
                 <section>
                     <h2><a href="#">10 Bills that the Congress in voting</a></h2>
-                    <p>March 29, 2017</p>
+                    <p class="datum">March 29, 2017</p>
                 </section>
                 <section>
                     <h2><a href="#">The narcissism of Donald Trump</a></h2>
-                    <p>March 29, 2017</p>
+                    <p class="datum">March 29, 2017</p>
                 </section>
             </figure>
             <figure>
@@ -174,7 +196,7 @@
                 <figcaption>
                     <a class="btn" href="#">Others</a>
                     <h2><a href="#">11 hottest toys for this holiday season</a></h2>
-                    <p>March 29, 2018</p>
+                    <p class="datum">March 29, 2018</p>
                 </figcaption>
             </figure>
             <figure>
@@ -182,7 +204,7 @@
                 <figcaption>
                     <a class="btn" href="#">Video</a>
                     <h2><a href="#">Get this good feeling about life</a></h2>
-                    <p>March 29, 2018</p>
+                    <p class="datum">March 29, 2018</p>
                 </figcaption>
             </figure>
             <figure>
@@ -190,7 +212,7 @@
                 <figcaption>
                     <a class="btn" href="#">Interview</a>
                     <h2><a href="#">Get this good feeling about life</a></h2>
-                    <p>March 29, 2018</p>
+                    <p class="datum">March 29, 2018</p>
                 </figcaption>
             </figure>
             <figure>
@@ -198,7 +220,7 @@
                 <figcaption>
                     <a class="btn" href="#">Video</a>
                     <h2><a href="#">11 hottest toys for this holiday season</a></h2>
-                    <p>March 29, 2018</p>
+                    <p class="datum">March 29, 2018</p>
                 </figcaption>
             </figure>
             <figure>
@@ -206,19 +228,19 @@
                 <figcaption>
                     <a class="btn" href="#">Video</a>
                     <h2><a href="#">10 Bills that the Congress in voting</a></h2>
-                    <p>March 29, 2017</p>
+                    <p class="datum">March 29, 2017</p>
                 </figcaption>
                 <section>
                     <h2><a href="#">Blair can't save Britain from Brexit</a></h2>
-                    <p>March 29, 2017</p>
+                    <p class="datum">March 29, 2017</p>
                 </section>
                 <section>
                     <h2><a href="#">Save the environment</a></h2>
-                    <p>March 29, 2017</p>
+                    <p class="datum">March 29, 2017</p>
                 </section>
                 <section>
                     <h2><a href="#">Protest to be announced in January</a></h2>
-                    <p>March 29, 2017</p>
+                    <p class="datum">March 29, 2017</p>
                 </section>
             </figure>
         </div>
@@ -226,11 +248,206 @@
             <div class="wrapper">
                 <figure>
                     <img src="./img/blog-img/4.jpg" alt="4">
-                    <h2><a href="#">Save the environment</a></h2>
+                    <h2><a href="#">Show suspended by PBS amid misconduct allegations</a></h2>
+                </figure>
+                <figure>
+                    <img src="./img/blog-img/5.jpg" alt="5">
+                    <h2><a href="#">Parents to Congress</a></h2>
+                </figure>
+                <figure>
+                    <img src="./img/blog-img/6.jpg" alt="6">
+                    <h2><a href="#">Third Buy Alert for This “Millionaire Maker” Stock</a></h2>
+                </figure>
+                <figure>
+                    <img src="./img/blog-img/7.jpg" alt="7">
+                    <h2><a href="#">The Chicago Mercantile Exchange is set to begin</a></h2>
+                </figure>
+                <figure>
+                    <img src="./img/blog-img/8.jpg" alt="8">
+                    <h2><a href="#">Trading bitcoin futures</a></h2>
+                </figure>
+                <figure>
+                    <img src="./img/blog-img/9.jpg" alt="9">
+                    <h2><a href="#">Are ‘Micro-Mansions’ the Next Big Thing?</a></h2>
+                </figure>
+                <figure>
+                    <img src="./img/blog-img/10.jpg" alt="10">
+                    <h2><a href="#">McKinney’s target market</a></h2>
+                </figure>
+                <figure>
+                    <img src="./img/blog-img/11.jpg" alt="11">
+                    <h2><a href="#">Australian Property Prices Remain Flat</a></h2>
                 </figure>
             </div>
         </div>
     </main>
-    <footer></footer>
+    <!-- Début Footer -->
+    <footer>
+        <div class="wrapper">
+            <section>
+                <h2>Regions</h2>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">US</a>
+                        </li>
+                        <li>
+                            <a href="#">Africa</a>
+                        </li>
+                        <li>
+                            <a href="#">Americas</a>
+                        </li>
+                        <li>
+                            <a href="#">Asia</a>
+                        </li>
+                        <li>
+                            <a href="#">China</a>
+                        </li>
+                        <li>
+                            <a href="#">Europe</a>
+                        </li>
+                        <li>
+                            <a href="#">Middle</a>
+                        </li>
+                        <li>
+                            <a href="#">East</a>
+                        </li>
+                        <li>
+                            <a href="#">Opinion</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+                <h2>Fashion</h2>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Election 2016</a>
+                        </li>
+                        <li>
+                            <a href="#">Nation</a>
+                        </li>
+                        <li>
+                            <a href="#">World</a>
+                        </li>
+                        <li>
+                            <a href="#">Our Team</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+                <h2>Politics</h2>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Business</a>
+                        </li>
+                        <li>
+                            <a href="#">Markets</a>
+                        </li>
+                        <li>
+                            <a href="#">Tech</a>
+                        </li>
+                        <li>
+                            <a href="#">Luxury</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+                <h2>Featured</h2>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Football</a>
+                        </li>
+                        <li>
+                            <a href="#">Golf</a>
+                        </li>
+                        <li>
+                            <a href="#">Tennis</a>
+                        </li>
+                        <li>
+                            <a href="#">Motosport</a>
+                        </li>
+                        <li>
+                            <a href="#">Horseracing</a>
+                        </li>
+                        <li>
+                            <a href="#">Equestrian</a>
+                        </li>
+                        <li>
+                            <a href="#">Sailing</a>
+                        </li>
+                        <li>
+                            <a href="#">Skiing</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+                <h2>FAQ</h2>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Aviation</a>
+                        </li>
+                        <li>
+                            <a href="#">Business</a>
+                        </li>
+                        <li>
+                            <a href="#">Traveler</a>
+                        </li>
+                        <li>
+                            <a href="#">Destinations</a>
+                        </li>
+                        <li>
+                            <a href="#">Features</a>
+                        </li>
+                        <li>
+                            <a href="#">Food/Drink</a>
+                        </li>
+                        <li>
+                            <a href="#">Hotels</a>
+                        </li>
+                        <li>
+                            <a href="#">Partner Hotels</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+                <h2>+More</h2>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Fashion</a>
+                        </li>
+                        <li>
+                            <a href="#">Design</a>
+                        </li>
+                        <li>
+                            <a href="#">Architecture</a>
+                        </li>
+                        <li>
+                            <a href="#">Arts</a>
+                        </li>
+                        <li>
+                            <a href="#">Autos</a>
+                        </li>
+                        <li>
+                            <a href="#">Luxury</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+        <div class="wrapper">
+            <small>Copyright ©2025 All rights reserved | This template is made with ❤️ by Colorlib</small>
+        </div>
+        <aside><a href="#top-page"><img src="./img/social-network/icons8-chevron-48.png" alt="chevron-upward"></a></aside>
+    </footer>
 </body>
 </html>
