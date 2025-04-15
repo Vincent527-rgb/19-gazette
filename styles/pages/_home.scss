@@ -24,9 +24,40 @@
         figure {
             position: relative;
             z-index: 1;
+            animation: carrousel 10s ease-in-out infinite alternate;
+
+            // Keyframes pour l'imitation carrousel
+            @keyframes carrousel {
+                0% {
+                    translate: 0;
+                }
+                40% {
+                    translate: 0;
+                }
+                50% {
+                    translate: -100%;
+                }
+                70% {
+                    translate: -100%;
+                }
+                80% {
+                    translate: -200%;
+                }
+                100% {
+                    translate: -200%;
+                }
+            }
+            // Fin keyframes carrousel
 
             img {
                 max-width: 576px;
+                object-fit: cover;
+                object-position: center;
+
+                @media screen and (min-width:576px) and (max-width:960px) {
+                    max-width: 450px;
+                    height: 420px;
+                }
             }
 
             figcaption {
@@ -58,6 +89,10 @@
     .wrapper {
         max-width: 90%;
         margin: auto;
+
+        @media screen and (min-width:576px) and (max-width:960px) {
+            max-width: 80%;
+        }
 
         // Global wrapper
         .datum {
@@ -125,8 +160,23 @@
             }
             section {
                 figure {
+                    @media screen and (min-width:576px) and (max-width:960px) {
+                        display: flex;
+                        justify-content: center;
+                        align-items: start;
+
+                        img {
+                            max-width: 220px;
+                            max-height: 220px;
+                            margin-right: 20px;
+                        }
+                    }
                     figcaption {
                         margin: 40px 0;
+
+                        @media screen and (min-width:576px) and (max-width:960px) {
+                            margin: 0;
+                        }
     
                         .view-comments {
                             color: #1c1c1c;
@@ -146,6 +196,12 @@
                 margin: 40px 0;
                 position: relative;
                 z-index: 1;
+                @media screen and (min-width:576px) and (max-width:960px) {
+                    img {
+                        max-width: 330px;
+                        max-height: 3300px;
+                    }
+                }
 
                 figcaption {
                     position: absolute;
@@ -156,11 +212,16 @@
                     flex-direction: column;
                     justify-content: space-between;
                     z-index: 20;
+                    @media screen and (min-width:576px) and (max-width:960px) {
+                        max-width: 330px;
+                        max-height: 3300px;
+                    }
 
                     .btn {
                         width: 50%;
                         text-align: center;
                     }
+                    //! se pète la gueule en md screen
                     h2>a {
                         font-size: 18px;
                         color: #fff;
@@ -175,6 +236,10 @@
                     position: absolute;
                     background-color: #1c1c1c44;
                     z-index: 2;
+                    @media screen and (min-width:576px) and (max-width:960px) {
+                        max-width: 330px;
+                        max-height: 3300px;
+                    }
                 }
             }
             .right-legend {
@@ -207,6 +272,9 @@
                     width: 100%;
                     font-size: 12px;
                     height: 45px;
+                    @media screen and (min-width:576px) and (max-width:960px) {
+                        width: 50%;
+                    }
                 }
                 .btn-big {
                     margin-top: 10px;
@@ -233,6 +301,19 @@
                 }
             }
         }        
+    }
+    .wrapper-special-grid {
+        @media screen and (min-width:576px) and (max-width:960px) {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+
+            .big-figure {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+
+        }
     }
 
     .bg-for-wrap {
