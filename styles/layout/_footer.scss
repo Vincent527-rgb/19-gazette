@@ -19,6 +19,18 @@ footer {
         position: relative;
         z-index: 20;
 
+        @media screen and (min-width:576px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding-top: 100px;
+            max-width: 80%;
+            text-align: center;
+        }
+        @media screen and (min-width:960px) {
+            max-width: 1200px;
+            grid-template-columns: repeat(6, 1fr);
+        }
+
         section {
             h2 {
                 color: #fff;
@@ -51,6 +63,17 @@ footer {
         margin-bottom: 20px;
         padding-bottom: 50px;
         border-bottom: #e4e4e4 1px solid;
+    }
+    .wrapper-end {
+        @media screen and (min-width:576px) {
+            margin-top: 0;
+            padding-top: 0;
+            
+            small {
+                grid-column: span 6;
+                margin: 30px 0;
+            }
+        }
     }
 
     aside {

@@ -58,6 +58,10 @@
                     max-width: 450px;
                     height: 420px;
                 }
+                @media screen and (min-width:960px) {
+                    max-width: 640px;
+                    height: 580px;
+                }
             }
 
             figcaption {
@@ -128,6 +132,12 @@
 
                 section {
                     margin-bottom: 50px;
+
+                    @media screen and (min-width:960px) {
+                        h2 {
+                            font-size: 48px;
+                        }
+                    }
                 }
                 figure {
                     figcaption {
@@ -155,12 +165,27 @@
                             }
     
                         }
+                        @media screen and (min-width:576px) {
+                            padding-top: 10px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: start;
+                            justify-content: space-between;
+
+                            p {
+                                font-size: 18px;
+                                line-height: 32px;
+                            }
+                            .social-network {
+                                margin: 29px 0 100px;
+                            }
+                        }
                     }
                 }
             }
             section {
                 figure {
-                    @media screen and (min-width:576px) and (max-width:960px) {
+                    @media screen and (min-width:576px) {
                         display: flex;
                         justify-content: center;
                         align-items: start;
@@ -192,6 +217,9 @@
             }
         }
         .breaking-news {
+            @media screen and (min-width:576px) and (max-width:960px) {
+                margin-top: 100px;
+            }
             figure {
                 margin: 40px 0;
                 position: relative;
@@ -200,6 +228,12 @@
                     img {
                         max-width: 330px;
                         max-height: 3300px;
+                    }
+                }
+                @media screen and (min-width:960px) {
+                    img {
+                        max-width: 255px;
+                        max-height: 255px;
                     }
                 }
 
@@ -216,12 +250,15 @@
                         max-width: 330px;
                         max-height: 3300px;
                     }
+                    @media screen and (min-width:960px) {
+                        max-width: 255px;
+                        max-height: 255px;
+                    }
 
                     .btn {
                         width: 50%;
                         text-align: center;
                     }
-                    //! se pète la gueule en md screen
                     h2>a {
                         font-size: 18px;
                         color: #fff;
@@ -239,6 +276,10 @@
                     @media screen and (min-width:576px) and (max-width:960px) {
                         max-width: 330px;
                         max-height: 3300px;
+                    }
+                    @media screen and (min-width:960px) {
+                        max-width: 255px;
+                        max-height: 255px;
                     }
                 }
             }
@@ -302,8 +343,16 @@
             }
         }        
     }
+    .wrapper-2col {
+        @media screen and (min-width:960px) {
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 75% 25%;
+            gap: 20px;
+        }
+    }
     .wrapper-special-grid {
-        @media screen and (min-width:576px) and (max-width:960px) {
+        @media screen and (min-width:576px) {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             gap: 10px;
@@ -314,6 +363,9 @@
             }
 
         }
+        @media screen and (min-width:960px) {
+            max-width: 1200px;
+        }
     }
 
     .bg-for-wrap {
@@ -321,6 +373,16 @@
         margin-top: 100px;
         background-color: #f6f6f6;
 
+        .wrapper {
+            @media screen and (min-width:576px) {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+            @media screen and (min-width:960px) {
+                max-width: 1200px;
+            }
+        }
         figure {
             margin-bottom: 30px;
 

@@ -1,4 +1,7 @@
 // *** Global ***
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: "Roboto", sans-serif;
 }
@@ -16,6 +19,10 @@ header {
 
         img {
             max-width: 190px;
+
+            @media screen and (min-width:960px) {
+                max-width: 350px;
+            }
         }
     }
     nav.no-desktop {
@@ -67,6 +74,7 @@ header {
 
         @media screen and (min-width:960px) {
             display: flex;
+            margin-bottom: 20px;
 
             ul {
                 padding: 0;
