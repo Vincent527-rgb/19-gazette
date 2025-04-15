@@ -1,0 +1,13 @@
+// Permet de créer des blocs de code css
+// 1) créer son mixin et lui donner un nom
+// 2) pour l'utiliser, utiliser @include nom-du-mixin (comme une propriété css)
+// 3) possibilité de rajouter des éléments modifiables entre () ==> voir exemple
+
+@mixin trans ($duree) {
+    transition: $duree all ease-in-out;
+}
+
+// 4) @mixin trans ($duree: valeur par défaut, $target) { transition: $duree $target ease-in-out}
+// 5) dans le fichier d'écriture :
+        // p { @include trans(1s, all) }
+        // p { @include trans($target: margin) }
