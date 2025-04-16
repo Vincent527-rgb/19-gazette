@@ -1,6 +1,7 @@
 footer {
     background: url(../img/bg-img/4.jpg) no-repeat center/cover;
     position: relative;
+    z-index: 10000;
 
     &::before {
         content: "";
